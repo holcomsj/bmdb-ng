@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor='let m of movies'>
+        <td>{{m.id}}</td>
+        <td>{{m.title}}</td>
+        <td>{{m.year}}</td>
+        <td>Edit | Delete</td>
+    </tr>
+</table>
