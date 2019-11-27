@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<table class="table">
+    <tr>
+        <th><a (click)="sortBy('id')">Id</a></th>
+        <th><a (click)="sortBy('lastName')">Name</a></th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor='let a of actors | sort:sortCriteria:sortOrder'>
+        <td>{{a.id}}</td>
+        <td>{{a.firstName}} {{a.lastName}}</td>
+        <td>Edit | Delete</td>
+    </tr>
+</table>
