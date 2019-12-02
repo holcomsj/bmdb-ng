@@ -15,6 +15,9 @@
     <tr *ngFor='let a of actors | sort:sortCriteria:sortOrder'>
         <td>{{a.id}}</td>
         <td>{{a.firstName}} {{a.lastName}}</td>
-        <td>Edit | Delete</td>
+        <td><a routerLink='/actors/detail/{{a.id}}'><img src='assets/details.png' width='20' height='20' title='Detail'></a> 
+             |
+           <a routerLink='/actors/edit/{{a.id}}'><img src='assets/pencil-icon.png' width='20' height='20' title='Edit'></a>
+          </td>
     </tr>
 </table>
