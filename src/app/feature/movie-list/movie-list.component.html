@@ -8,12 +8,13 @@
 </div>
 <table class="table">
     <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Year</th>
+        <th><a (click)="sortBy('id')">Id</a></th>
+        <th><a (click)="sortBy('title')">Title</a></th>
+        <th><a (click)="sortBy('year')">Year</a></th>
+   
         <th>Action</th>
     </tr>
-    <tr *ngFor='let m of movies'>
+    <tr *ngFor='let m of movies | sort:sortCriteria:sortOrder'>
         <td>{{m.id}}</td>
         <td>{{m.title}}</td>
         <td>{{m.year}}</td>
